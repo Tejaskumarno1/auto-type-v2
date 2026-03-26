@@ -1,0 +1,7 @@
+customtkinter
+pynput
+pyautogui
+pyperclip
+Pygments
+pystray
+Pillow

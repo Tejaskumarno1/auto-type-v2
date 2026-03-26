@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Auto Typer Pro
+Comment=Senior Dev Edition — Cross-Platform Auto Typing Tool
+Exec=/usr/local/bin/autotyperpro
+Type=Application
+Categories=Utility;Development;
+Terminal=false
+StartupNotify=true
