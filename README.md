@@ -21,12 +21,6 @@
 
 ---
 
-## 🛠️ Installation (New System Guide)
-
-Follow these steps to set up Auto Typer Pro on a fresh Linux installation (Ubuntu/Debian).
-
----
-
 ## 🛠️ Installation Guide
 
 Choose the section below that matches your operating system. Follow the steps exactly to set up Auto Typer Pro.
@@ -42,9 +36,13 @@ Recommended for users on dedicated Linux systems or Virtual Machines (VMware/Vir
     ```bash
     python3 -m venv venv
     source venv/bin/activate
-    pip install -r requirements.txt
+    python3 -m pip install --upgrade pip
     ```
-3.  **Run**: `python3 main.py`
+3.  **Install Libraries**:
+    ```bash
+    python3 -m pip install customtkinter pynput pyautogui pyperclip Pygments pystray Pillow
+    ```
+4.  **Run**: `python3 main.py`
 
 ---
 
@@ -57,9 +55,13 @@ The simplest setup. Works great for local automation.
     ```powershell
     python -m venv venv
     .\venv\Scripts\activate
-    pip install -r requirements.txt
+    python -m pip install --upgrade pip
     ```
-3.  **Run**: `python main.py`
+3.  **Install Libraries**:
+    ```powershell
+    python -m pip install customtkinter pynput pyautogui pyperclip Pygments pystray Pillow
+    ```
+4.  **Run**: `python main.py`
 
 ---
 
@@ -74,26 +76,25 @@ The simplest setup. Works great for local automation.
     ```bash
     python3 -m venv venv
     source venv/bin/activate
-    pip install -r requirements.txt
+    python3 -m pip install --upgrade pip
     ```
-3.  **🚨 Critical Step (Accessibility)**:
+3.  **Install Libraries**:
+    ```bash
+    python3 -m pip install customtkinter pynput pyautogui pyperclip Pygments pystray Pillow
+    ```
+4.  **🚨 Critical Step (Accessibility)**:
     - Go to **System Settings** > **Privacy & Security** > **Accessibility**.
     - Click the **+** button.
     - Add your **Terminal** application (and the code editor if you're running it from there).
     - This allows Python to simulate keystrokes on your screen.
-4.  **Run**: `python3 main.py`
-
----
+5.  **Run**: `python3 main.py`
 
 ---
 
 ## 📖 How to Use
 
 ### 1. Launch the App
-With your virtual environment active, run:
-```bash
-python3 main.py
-```
+With your virtual environment active, run the main script as shown in the platform guides above.
 
 ### 2. Prepare Your Text
 -   Type or paste your code/text into the **Main Editor**.
