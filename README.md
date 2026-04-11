@@ -25,30 +25,34 @@
 
 Follow these steps to set up Auto Typer Pro on a fresh Linux installation (Ubuntu/Debian).
 
-### 1. Install System Dependencies
-Open your terminal and run the following command to install the required system-level packages:
-
+### Linux Setup (Ubuntu/Debian)
+Open your terminal and run:
 ```bash
 sudo apt update
 sudo apt install -y python3-tk xclip xdotool libx11-dev
 ```
 
-> [!NOTE]
-> - **python3-tk**: Required for the graphical user interface.
-> - **xclip**: Required for the clipboard/paste functionality.
-> - **xdotool**: Recommended for stable typing on Linux systems.
+### Windows Setup
+1.  **Install Python**: Download from [python.org](https://www.python.org/) (ensure "Add to PATH" is checked).
+2.  **Open Terminal**: Use PowerShell or CMD as Administrator.
+3.  **Install**: No extra system dependencies needed! Just follow the Python setup below.
 
-### 2. Set Up Python Environment
-Navigate to the project directory and create a virtual environment to keep your system clean:
+### macOS Setup
+1.  **Install Homebrew**: (Recommended) `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+2.  **Install Python**: `brew install python`
+3.  **Permissions**: You must grant **Accessibility Permissions** to your Terminal application (System Settings > Privacy & Security > Accessibility) to allow the app to simulate typing.
+
+---
+
+### Python Environment (All Platforms)
+Navigate to the project directory and run:
 
 ```bash
-# Create a virtual environment
+# Create and activate virtual environment
 python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-# Activate it
-source venv/bin/activate
-
-# Install dependencies
+# Install requirements
 pip install -r requirements.txt
 ```
 
