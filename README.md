@@ -25,36 +25,65 @@
 
 Follow these steps to set up Auto Typer Pro on a fresh Linux installation (Ubuntu/Debian).
 
-### Linux Setup (Ubuntu/Debian)
-Open your terminal and run:
-```bash
-sudo apt update
-sudo apt install -y python3-tk xclip xdotool libx11-dev
-```
+---
 
-### Windows Setup
-1.  **Install Python**: Download from [python.org](https://www.python.org/) (ensure "Add to PATH" is checked).
-2.  **Open Terminal**: Use PowerShell or CMD as Administrator.
-3.  **Install**: No extra system dependencies needed! Just follow the Python setup below.
+## 🛠️ Installation Guide
 
-### macOS Setup
-1.  **Install Homebrew**: (Recommended) `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
-2.  **Install Python**: `brew install python`
-3.  **Permissions**: You must grant **Accessibility Permissions** to your Terminal application (System Settings > Privacy & Security > Accessibility) to allow the app to simulate typing.
+Choose the section below that matches your operating system. Follow the steps exactly to set up Auto Typer Pro.
+
+### 🐧 1. Linux (Ubuntu/Debian/Linux Mint)
+Recommended for users on dedicated Linux systems or Virtual Machines (VMware/VirtualBox).
+
+1.  **System Dependencies**: Install the core automation tools:
+    ```bash
+    sudo apt update && sudo apt install -y python3-tk xclip xdotool libx11-dev
+    ```
+2.  **Environment Setup**:
+    ```bash
+    python3 -m venv venv
+    source venv/bin/activate
+    pip install -r requirements.txt
+    ```
+3.  **Run**: `python3 main.py`
 
 ---
 
-### Python Environment (All Platforms)
-Navigate to the project directory and run:
+### 🪟 2. Windows 10 / 11
+The simplest setup. Works great for local automation.
 
-```bash
-# Create and activate virtual environment
-python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+1.  **Python**: Install Python 3.10+ from [python.org](https://www.python.org/). **Check the box "Add Python to PATH"** during installation.
+2.  **Environment Setup**:
+    Open PowerShell or CMD in the project folder:
+    ```powershell
+    python -m venv venv
+    .\venv\Scripts\activate
+    pip install -r requirements.txt
+    ```
+3.  **Run**: `python main.py`
 
-# Install requirements
-pip install -r requirements.txt
-```
+---
+
+### 🍎 3. macOS (Intel & Apple Silicon)
+**Important**: macOS requires extra security permissions for input simulation.
+
+1.  **Python**: Install using [Homebrew](https://brew.sh/):
+    ```bash
+    brew install python
+    ```
+2.  **Environment Setup**:
+    ```bash
+    python3 -m venv venv
+    source venv/bin/activate
+    pip install -r requirements.txt
+    ```
+3.  **🚨 Critical Step (Accessibility)**:
+    - Go to **System Settings** > **Privacy & Security** > **Accessibility**.
+    - Click the **+** button.
+    - Add your **Terminal** application (and the code editor if you're running it from there).
+    - This allows Python to simulate keystrokes on your screen.
+4.  **Run**: `python3 main.py`
+
+---
 
 ---
 
